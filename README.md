@@ -51,3 +51,26 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
   ![create_admin_successful](https://cloud.githubusercontent.com/assets/13005159/17632177/d096a4b8-60e8-11e6-9a6e-bb7fdf97b670.png)
   
   
+## Users Role - Administration - Admin Panel
+
+  ★★  Admin Dashboard  ★★ 
+  The User Interface of the admin Panel
+  ![admin_panel](https://cloud.githubusercontent.com/assets/13005159/17632640/51e39326-60eb-11e6-8ec9-4fad998c3e11.png)
+
+
+## Users Role - Administration - Create Section
+
+  ★★  Admin Panel - Create Section  ★★ 
+    ✔ Admin can create section 
+    ✔ Assign Section time schedule
+  
+  ![create_section](https://cloud.githubusercontent.com/assets/13005159/17632692/92ec6230-60eb-11e6-8c57-7364392dd3d9.png)
+
+  
+  
+  
+  
+  
+  
+  
+  
