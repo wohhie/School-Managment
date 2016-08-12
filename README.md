@@ -7,13 +7,14 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
   - Admin <br/>
   - Student <br/>
   - Teacher <br/>
+  <br/>
   ✔ Admin <br/>
-    - Create Admin <br/>
-    - Create Curriculum / Change Curriculum <br/>
-    - Create Section <br/>
-    - Create Courses <br/>
-    - Assign Course to Student <br/>
-    - Assign Course to Teacher <br/>
+  - Create Admin <br/>
+  - Create Curriculum / Change Curriculum <br/>
+  - Create Section <br/>
+  - Create Courses <br/>
+  - Assign Course to Student <br/>
+  - Assign Course to Teacher <br/>
   
   <br/>
   ✔ Student <br/>
