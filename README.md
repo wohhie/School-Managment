@@ -3,10 +3,9 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
 
 ## Functionalities 
   
-✔ Login <br/>
-  - Admin <br/>
-  - Student <br/>
-  - Teacher <br/>
+✔ Admin <br/>
+✔ Student <br/>
+✔ Teacher <br/>
   <br/>
   ✔ Admin <br/>
   - Create Admin <br/>
