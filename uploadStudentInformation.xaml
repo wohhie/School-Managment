@@ -1,0 +1,18 @@
+﻿<Window x:Class="CCEmanagement.uploadStudentInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCEmanagement"
+        mc:Ignorable="d"
+        Title="uploadStudentInformation" Height="367" Width="709">
+    <Grid Height="279" Margin="0,0,2,-10">
+        <Label Content="Save and Retrieve Images From Database in WPF" FontSize="20" HorizontalAlignment="Center" Name="lblTitle" VerticalAlignment="Top" Margin="123,11,123,0" />
+        <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="28,61,0,0" Name="btnBrowse" VerticalAlignment="Top" Width="142" Click="btnBrowse_Click" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="176,61,0,0" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="435,61,0,0" Name="cbImages" VerticalAlignment="Top" Width="140" />
+        <Button Content="Show" Height="23" HorizontalAlignment="Left" Margin="583,61,0,0" Name="btnShow" VerticalAlignment="Top" Width="75" Click="btnShow_Click" />
+        <Image Height="167" HorizontalAlignment="Left" Margin="28,90,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="223" />
+        <Image Height="167" HorizontalAlignment="Left" Margin="435,90,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="223" />
+    </Grid>
+</Window>

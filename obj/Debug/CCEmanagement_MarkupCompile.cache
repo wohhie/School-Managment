@@ -1,0 +1,20 @@
+﻿CCEmanagement
+
+
+winexe
+C#
+.cs
+C:\Users\wohhie\Documents\Visual Studio 2015\Projects\SchoolManagement\CCEmanagement\CCEmanagement\obj\Debug\
+CCEmanagement
+none
+false
+DEBUG;TRACE
+C:\Users\wohhie\Documents\Visual Studio 2015\Projects\SchoolManagement\CCEmanagement\CCEmanagement\App.xaml
+181751502759
+
+28-984931322
+15808405575
+AdminPanel.xaml;Admin_CreateAdmin.xaml;Admin_CreateCourse.xaml;Admin_Curriculum.xaml;Admin_Enroll_Student.xaml;Admin_Enroll_Teacher.xaml;Admin_StudentList.xaml;Attendance.xaml;CreateSection.xaml;Dashboard.xaml;MainWindow.xaml;Student.xaml;StudentGradingSystem.xaml;subjectDetails.xaml;TeacherDasboard.xaml;Teacher_AssignGrade.xaml;Teacher_StudentDetails.xaml;uploadStudentInformation.xaml;
+
+False
+

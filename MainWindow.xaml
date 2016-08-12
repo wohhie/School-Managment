@@ -1,0 +1,31 @@
+﻿<Window x:Class="CCEmanagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCEmanagement"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="350" Width="524">
+    <Grid Background="Azure" Margin="1,2,-3,0" ForceCursor="True" >
+        <!-- Title -->
+        <Label x:Name="label" Content="ABC SCHOOL " Margin="25,25,343,0" Height="40" Width="150" FontSize="20" RenderTransformOrigin="-0.028,0.444" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}"/>
+        <!-- Title -->
+        <!-- Short Title -->
+        <Label x:Name="label2" Content="School Management System" Margin="50,55,233,0" Height="40" Width="235" FontSize="16" RenderTransformOrigin="-0.028,0.444" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}"/>
+        <!-- Title -->
+
+        <!-- Uername -->
+        <Label x:Name="lb_username_roll" Content="Username" HorizontalAlignment="Left" FontWeight="Bold" VerticalAlignment="Top" Margin="207,165,0,0"/>
+        <TextBox x:Name="roll_id" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="205,192,0,0" Padding="5px" BorderBrush="#FFC33A3A"/>
+        <!--/. Username -->
+        <!-- Password -->
+        <Label x:Name="lb_password" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="335,164,0,0"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Padding="5px" Margin="335,192,0,0" BorderBrush="#FFC33A3A"/>
+        <!--/. Password -->
+
+        <!-- Submit & Registration -->
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="380,232,0,0" Height="25" BorderBrush="#FF742323" Foreground="White" Click="button_Click" Background="#FFD64040"/>
+        <!--/. Submit & Registration -->
+    </Grid>
+</Window>

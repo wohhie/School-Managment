@@ -1,0 +1,120 @@
+﻿<Window x:Class="CCEmanagement.CreateSection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCEmanagement"
+        mc:Ignorable="d"
+        Title="Create Section" 
+        Height="376" 
+        Width="429" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Background="LightGray">
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="48*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!-- create -->
+        <Button x:Name="create_button" Content="Create" Grid.Row="14" Grid.Column="3" Background="#FF147E69" Foreground="WhiteSmoke" Margin="35,0,4,0" Click="create_button_Click" Grid.ColumnSpan="3"/>
+
+        <!-- heading -->
+        <Label x:Name="lb_create_section" Content="Create Section" Grid.Column="1" Margin="2,2,0,0" Grid.Row="1" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Foreground="#FF2D2D30" Height="31" Width="118" Grid.RowSpan="2"/>
+
+        <!-- section name -->
+        <Label x:Name="lb_section_name" Content="Section Name" Grid.Column="1" Margin="2,6,0,0" Grid.Row="4" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30"/>
+        <TextBox x:Name="section_name" TextWrapping="Wrap" Grid.Column="3" Margin="0,2,0,0" Grid.Row="4" Grid.ColumnSpan="3"/>
+
+        <!-- start time -->
+        <Label x:Name="lb_starttime" Content="Start Time" Grid.Column="1" Margin="1,2,1,0" Grid.Row="6" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30"/>
+        <ComboBox x:Name="starttime" Grid.Column="3" Margin="2,0,0,0" Grid.Row="6" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <ComboBoxItem>08:00</ComboBoxItem>
+            <ComboBoxItem>09:00</ComboBoxItem>
+            <ComboBoxItem>10:00</ComboBoxItem>
+            <ComboBoxItem>11:00</ComboBoxItem>
+            <ComboBoxItem>12:00</ComboBoxItem>
+            <ComboBoxItem>1:00</ComboBoxItem>
+            <ComboBoxItem>2:00</ComboBoxItem>
+            <ComboBoxItem>3:00</ComboBoxItem>
+            <ComboBoxItem>4:00</ComboBoxItem>
+        </ComboBox>
+
+        <!-- capacity -->
+        <Label x:Name="lb_capacity" Content="Capacity" Grid.Column="1" Margin="2,0,0,0" Grid.Row="8" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30"/>
+        <ComboBox x:Name="section_capacity" Grid.Column="3" Grid.Row="8" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="3">
+            <ListBoxItem Content="30"/>
+            <ListBoxItem Content="35"/>
+            <ListBoxItem Content="40"/>
+        </ComboBox>
+
+        <!-- cancel -->
+        <Button x:Name="cancel" Content="Cancel" Grid.Row="14" Grid.Column="1" Background="#EC1A41" Foreground="WhiteSmoke" Margin="0,0,1,0" Click="cancel_Click"/>
+
+        <!-- end time -->
+        <Label x:Name="lb_endtime" Content="To" Grid.Column="4" Margin="0,1,0,0" Grid.Row="6" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30" VerticalAlignment="Top" Height="29" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="endtime" Grid.Column="5" Margin="1,0,0,0" Grid.Row="6" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <ComboBoxItem>09:00</ComboBoxItem>
+            <ComboBoxItem>10:00</ComboBoxItem>
+            <ComboBoxItem>11:00</ComboBoxItem>
+            <ComboBoxItem>12:00</ComboBoxItem>
+            <ComboBoxItem>1:00</ComboBoxItem>
+            <ComboBoxItem>2:00</ComboBoxItem>
+            <ComboBoxItem>3:00</ComboBoxItem>
+            <ComboBoxItem>4:00</ComboBoxItem>
+            <ComboBoxItem>5:00</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="lb_room_no" Content="Room No#" Margin="2,2,0,0" Grid.Row="10" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30" Grid.Column="1"/>
+        <ComboBox x:Name="section_roomno" Grid.Column="3" Grid.Row="10" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="3">
+            <ComboBoxItem>R101</ComboBoxItem>
+            <ComboBoxItem>R102</ComboBoxItem>
+            <ComboBoxItem>R103</ComboBoxItem>
+            <ComboBoxItem>R104</ComboBoxItem>
+            <ComboBoxItem>R105</ComboBoxItem>
+            <ComboBoxItem>R106</ComboBoxItem>
+            <ComboBoxItem>R107</ComboBoxItem>
+            <ComboBoxItem>R108</ComboBoxItem>
+            <ComboBoxItem>R109</ComboBoxItem>
+            <ComboBoxItem>R110</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="lb_room_no_Copy" Content="Day" Margin="1,2,1,0" Grid.Row="12" FontSize="13.333" FontWeight="Bold" Foreground="#FF2D2D30" Grid.Column="1"/>
+        <ComboBox x:Name="section_day" Grid.Column="3" Grid.Row="12" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="3">
+            <ComboBoxItem>Sunday</ComboBoxItem>
+            <ComboBoxItem>Monday</ComboBoxItem>
+            <ComboBoxItem>Tuesday</ComboBoxItem>
+            <ComboBoxItem>Wednesday</ComboBoxItem>
+            <ComboBoxItem>Thursday</ComboBoxItem>
+            <ComboBoxItem>Friday</ComboBoxItem>
+            <ComboBoxItem>Saturday</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="message" Content="" VerticalAlignment="Top" Grid.Column="1" Margin="0,5,0,0" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="4" Foreground="#FF147E69"/>
+    </Grid>
+</Window>

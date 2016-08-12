@@ -1,0 +1,367 @@
+﻿/******************************************/
+		/* cce_student */
+/******************************************/
+
+
+
+create table cce_student(
+id int primary key identity,
+username varchar(50),
+firstname varchar(50),
+lastname varchar(50),
+email varchar(50),
+password varchar(50),
+roll varchar(11),
+)
+
+
+
+
+insert into cce_student values('wohhie','wohhie','mahmud','wohhie@mail.com','abc1234','01-285-A')
+insert into cce_student values('rakib','rakib','islam','rakib@mail.com','abc1234','01-225-A')
+insert into cce_student values('shohan','shohan','hossain','shohan@mail.com','abc1234','01-283-B')
+
+
+
+insert into cce_student values('arif','arif','khan','arif@mail.com','abc1234','01-029-A')
+insert into cce_student values('bristi','bristi','islam','bristi@mail.com','abc1234','01-027-A')
+insert into cce_student values('camelia','camelia','hossain','camelia@mail.com','abc1234','01-025-B')
+
+
+insert into cce_student values('disha','disha','khan','arif@mail.com','abc1234','01-017-A')
+insert into cce_student values('era','era','islam','bristi@mail.com','abc1234','01-010-A')
+insert into cce_student values('fairha','fairha','hossain','camelia@mail.com','abc1234','01-018-B')
+
+
+
+insert into cce_student values('gaffar','gaffar','khan','arif@mail.com','abc1234','01-007-A')
+insert into cce_student values('hasan','hasan','islam','bristi@mail.com','abc1234','01-006-A')
+insert into cce_student values('jewel','jewel','hossain','camelia@mail.com','abc1234','01-283-B')
+
+
+
+insert into cce_student values('kaisar','kaisar','khan','arif@mail.com','abc1234','01-285-A')
+insert into cce_student values('lila','lila','islam','bristi@mail.com','abc1234','01-003-A')
+insert into cce_student values('mina','mina','hossain','camelia@mail.com','abc1234','01-002-B')
+
+
+
+insert into cce_student values('opra','opra','khan','arif@mail.com','abc1234','01-001-A')
+insert into cce_student values('pias','pias','islam','bristi@mail.com','abc1234','01-009-A')
+insert into cce_student values('quiaum','quiaum','hossain','camelia@mail.com','abc1234','01-985-B')
+
+
+
+insert into cce_student values('sultan','sultan','khan','arif@mail.com','abc1234','01-234-A')
+insert into cce_student values('vila','vila','islam','bristi@mail.com','abc1234','01-555-A')
+insert into cce_student values('warsy','warsy','hossain','camelia@mail.com','abc1234','01-234-B')
+
+
+insert into cce_student values('xunny','xunny','khan','arif@mail.com','abc1234','01-764-A')
+insert into cce_student values('zisan','zisan','islam','bristi@mail.com','abc1234','01-125-A')
+insert into cce_student values('marsha','marsha','hossain','camelia@mail.com','abc1234','01-123-B')
+
+
+
+
+/******************************************/
+			CCE_TIME
+*******************************************/
+
+create table cce_time(
+id int primary key identity,
+starttime time,
+endtime time
+)
+
+
+insert into cce_time values('8:00AM','9:00AM')
+insert into cce_time values('9:00AM','10:00AM')
+insert into cce_time values('10:00AM','11:00AM')
+insert into cce_time values('11:00AM','12:00AM')
+insert into cce_time values('12:00AM','1:00PM')
+insert into cce_time values('1:00PM','2:00PM')
+insert into cce_time values('2:00PM','3:00PM')
+insert into cce_time values('3:00PM','4:00PM')
+insert into cce_time values('4:00PM','5:00PM')
+insert into cce_time values('5:00PM','6:00PM')
+insert into cce_time values('6:00PM','7:00PM')
+insert into cce_time values('7:00PM','8:00PM')
+insert into cce_time values('8:00PM','9:00PM')
+
+
+
+
+create table cce_section(
+id int primary key identity,
+sec_name varchar(1)
+)
+
+
+insert into cce_section values('A')
+insert into cce_section values('B')
+insert into cce_section values('C')
+insert into cce_section values('D')
+insert into cce_section values('E')
+insert into cce_section values('F')
+insert into cce_section values('G')
+insert into cce_section values('H')
+insert into cce_section values('I')
+
+
+
+/******************************************/
+			CCE_courselist
+*******************************************/
+
+
+
+
+CREATE TABLE cce_courselist(
+id int primary key identity,
+course_name varchar(255),
+student_id int,
+course_time_id int,
+course_section_id int,
+foreign key ( course_time_id ) references cce_time(id),
+foreign key ( course_section_id ) references cce_section(id),
+)
+
+
+insert into cce_courselist values('bangla',1,1,3)
+insert into cce_courselist values('english',1,2,4)
+insert into cce_courselist values('math',3,3,4)
+insert into cce_courselist values('economics',1,5,6)
+insert into cce_courselist values('physics',1,4,2)
+
+
+
+/******************************************/
+			SQL QUERY
+*******************************************/
+
+select  cl.id,cl.course_name, ct.starttime, ct.endtime, csec.sec_name
+FROM	cce_courselist cl,
+		cce_student cs,
+		cce_time ct,
+		cce_section csec
+	    where 
+		
+		cs.username = 'wohhie' and
+		cl.student_id = cs.id and 
+		cl.course_time_id = ct.id and
+		cl.course_section_id = csec.id
+
+
+
+/******************************************/
+			CCE TEACHER
+*******************************************/
+
+create table cce_teacher(
+id int primary key identity,
+username varchar(50),
+firstname varchar(50),
+lastname varchar(50),
+email varchar(50),
+password varchar(50),
+roll varchar(11)
+)
+
+
+insert into cce_teacher values('istiq','sayed','istiaq','sia@mail.com','abc1234','012-285-4')
+insert into cce_teacher values('hafiz','hafiz','rahman','hafiz@mail.com','abc1234','012-125-3')
+insert into cce_teacher values('nabila','nabila','hossain','nabila@mail.com','abc1234','015-223-3')
+insert into cce_teacher values('afsana','afsana','hossain','afsana@mail.com','abc1234','014-483-2')
+
+
+
+/******************************************/
+			CCE TEACHER_COURSELIST
+*******************************************/
+create table cce_teacher_courselist(
+	id int primary key identity,
+	courseID varchar(10),
+	courseName varchar(50),
+	teacherID varchar(10),
+	sectionID int
+)
+
+
+
+insert into cce_teacher_courselist values(,)
+
+
+
+
+/******************************************/
+			CCE_ADMIN
+*******************************************/
+
+create table cce_admin(
+id int primary key identity,
+username varchar(50),
+password varchar(50),
+email_address varchar(100)
+
+)
+
+
+insert into cce_admin values('admin','admin','admin@mail.com');
+
+
+
+
+/****************/
+/******************************************/
+			STUEDNT ATTENDANCE
+*******************************************/
+
+
+CREATE TABLE cce_student_attendance(
+id int primary key identity,
+student_id int,
+course_id int,
+attendance_mark int
+
+foreign key ( student_id ) references cce_student(id),
+foreign key ( course_id ) references cce_courselist(id),
+)
+
+
+
+insert into cce_student_attendance values(1,1,10)
+insert into cce_student_attendance values(1,2,4)
+insert into cce_student_attendance values(1,3,9)
+insert into cce_student_attendance values(1,5,5)
+
+
+/***********************************************
+			CCE_SECTION LIST
+***********************************************/
+
+CREATE TABLE cce_sectionlist(
+	id int primary key identity,
+	section varchar(10),
+	starttime time,
+	endtime time,
+	capacity int,
+)
+
+
+
+
+insert into cce_sectionlist values('A2','9:00','10:00',35)
+insert into cce_sectionlist values('A3','10:00','11:00',35)
+
+
+
+
+/***********************************************
+			CCE_COURSELIST
+***********************************************/
+
+create table cce_courselist(
+	id int primary key identity,
+	courseName varchar(255),
+	sectionName varchar(10),
+	cStartTime time,
+	cEndTime time,
+	
+)
+
+
+
+
+
+
+
+
+
+
+/***********************************************
+			CCE_TEACHER_COURSELIST
+***********************************************/
+
+create table cce_teacherCourseList(
+id int primary key identity,
+teacherID int,
+courseID int,
+
+
+foreign key ( teacherID ) references cce_teacher(id),
+foreign key ( courseID ) references cce_courselist(id),
+)
+
+
+
+
+
+
+/***********************************************
+			CCE_STUDENT_COURSELIST
+***********************************************/
+
+create table cce_studentCourseList(
+id int primary key identity,
+studentID int,
+courseID int,
+
+
+foreign key ( studentID ) references cce_student(id),
+foreign key ( courseID ) references cce_courselist(id),
+)
+
+
+
+
+
+/***********************************************
+			CCE_STUDENT_MARK
+***********************************************/
+
+create table cce_marks(
+	id int primary key identity,
+	attendance decimal(5,2),
+	quiz decimal(5,2),
+	report decimal(5,2),
+	first_term decimal(5,2),
+	second_term decimal(5,2),
+	final_term decimal(5,2),
+	assignment decimal(5,2),
+	studentID int
+	foreign key ( studentID ) references cce_student(id)
+)
+
+
+
+/***************************************************************
+				CREATE CURRICULUM
+****************************************************************/
+create table cce_curriculum(
+	id int primary key identity,
+	program varchar(255),
+	gradingSystem varchar(255),
+	markSystem varchar(255),
+)
+
+
+/***************************************************************
+				Student Details Marks
+****************************************************************/
+
+CREATE TABLE cce_finalTermMakrs(
+	id int primary key identity,
+	studentID int,
+	courseID int,
+	quiz1 decimal(5,2),
+	quiz2 decimal(5,2),
+	assignment decimal(5,2),
+	report decimal(5,2),
+	term decimal(5,2),
+	total decimal(5,2),
+	grade varchar(50),
+	
+	foreign key ( studentID ) references cce_student(id),
+	foreign key ( courseID ) references cce_courselist(id),
+)

@@ -1,0 +1,222 @@
+﻿<Window x:Class="CCEmanagement.TeacherDasboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCEmanagement"
+        mc:Ignorable="d"
+        Title="TeacherDasboard" 
+        Height="500" Width="1000" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Background="#FFF5F8FA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,-1,2,0" Background="#FF9266CC" Grid.ColumnSpan="10" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="24*"/>
+                <ColumnDefinition Width="17*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <Grid Background="#FF232B2D" Margin="0,0,0,1" Grid.RowSpan="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="46*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+
+        <Grid Background="#FF7853A9" Margin="-2,-1,0,0"/>
+
+
+        <!-- =====================SELECT COURSE ===========================-->
+        <Grid Grid.ColumnSpan="8" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Right" Grid.RowSpan="8" Width="717">
+            <DataGrid 
+    			x:Name="studentList" 
+    			RowHeight="25" 
+    			ColumnWidth="100" 
+    			Grid.ColumnSpan="1"
+                
+                
+    			BorderThickness="2"
+    			BorderBrush="#eeeeee" 
+    			GridLinesVisibility="Horizontal" 
+    			HeadersVisibility="All"
+    			AutoGenerateColumns="False"
+                
+                
+                
+    			IsReadOnly="True"
+    			AreRowDetailsFrozen="True"
+    			FrozenColumnCount="2"
+    			CanUserReorderColumns="False"
+    			CanUserResizeColumns="False"
+    			CanUserSortColumns = "False"
+    			HorizontalScrollBarVisibility="Hidden"
+    			VerticalScrollBarVisibility="Auto"
+    			SelectionMode="Extended"
+                
+                
+    			Background="LightGray" 
+    			RowBackground="LightYellow"
+    			AlternatingRowBackground="LightBlue" 
+    			HorizontalContentAlignment="Center" 
+    			VerticalContentAlignment="Center" 
+    			HorizontalGridLinesBrush="{x:Null}" 
+    			VerticalGridLinesBrush="WhiteSmoke" 
+    			FontSize="13.333" 
+    			Margin="-4,-2,0,0" ScrollViewer.CanContentScroll="True">
+
+                <!-- DATAGRID COLUMN STYLE -->
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="#9266CC"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="Height" Value="35"/>
+                        <Setter Property="Foreground" Value="#f5f5f5"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <!-- DATAGRID CELL STYLE -->
+                <DataGrid.CellStyle>
+                    <Style  TargetType="{x:Type DataGridCell}">
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <!-- Subject ID -->
+                    <DataGridTextColumn
+    					Header="CourseID"
+    					Width="100"
+    					Binding="{Binding courseID}"/>
+                    
+                    <!-- COURSE ID -->
+                    <DataGridTextColumn
+    					Header="Student ID"
+    					Width="100"
+    					Binding="{Binding roll}"/>
+
+
+                    <!-- COURSE NAME -->
+                    <DataGridTextColumn
+    					Header="First Name"
+    					Width="100"
+    					Binding="{Binding firstname}"/>
+
+
+                    <!-- COURSE NAME -->
+                    <DataGridTextColumn
+    					Header="Last Name"
+    					Width="100"
+    					Binding="{Binding lastname}"/>
+
+                    <!-- START TIME -->
+                    <DataGridTextColumn
+    					Header="FROM"
+    					Width="100"
+    					Binding="{Binding cStartTime}"/>
+
+                    <!-- END TIME -->
+                    <DataGridTextColumn
+    					Header="TO"
+    					Width="100"
+    					Binding="{Binding cEndTime}"/>
+
+                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button 
+                                    Background="#9266CC" 
+                                    Foreground="#f5f5f5" 
+                                    Padding="4px"
+                                    FontSize="11px"
+                                    Width="80px"
+                                    BorderBrush="#9266CC"
+                                    
+                                    Click="view_Student_details">Details</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+
+
+
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        </Grid>
+
+
+        <Label x:Name="label_Copy" Content="Selected Course" Grid.Column="2" Margin="2,4,3,0" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold" Foreground="#FF232B2D" Height="31" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="2"/>
+        <!-- =====================SELECTED COURSE ===========================-->
+
+        <Button x:Name="button" Content="Offer Courses" VerticalAlignment="Top" Grid.Row="7" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Margin="1,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button_Copy" Content="Class Routine" VerticalAlignment="Top" Grid.Row="8" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Margin="1,2,32,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="button_Copy1" Content="Exam Routine" VerticalAlignment="Top" Grid.Row="9" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Grid.ColumnSpan="2" Margin="2,2,31,0" Grid.RowSpan="2"/>
+        <Button x:Name="button_Copy2" Content="Exam Routine" VerticalAlignment="Top" Grid.Row="10" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button_Copy3" Content="Publish Result" VerticalAlignment="Top" Grid.Row="11" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button_Copy4" Content="Report" VerticalAlignment="Top" Grid.Row="12" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="13.333" Grid.RowSpan="2" Margin="0,1,0,0"/>
+        <Button x:Name="attendance_track" Content="Attendance" Grid.Row="16" Background="#FF9266CC" BorderBrush="{x:Null}" Foreground="WhiteSmoke" FontSize="13.333" Margin="1,0,0,0" Grid.Column="9" Click="attendance_track_Click"/>
+        <Label x:Name="teacher_ID" Content="Teacher ID" FontSize="11" Margin="-8,20,3,0" VerticalAlignment="Top"  Foreground="White" Height="25" HorizontalContentAlignment="Center" Grid.Row="4" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+        <Label x:Name="teacher_name" Content="Teacher Name" FontSize="11" Margin="-5,1,0,0" VerticalAlignment="Top" Foreground="White" Height="25" HorizontalContentAlignment="Center" Grid.Row="3" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+        <Label x:Name="label_Copy2" Content="#Selected Course" Grid.Column="2" Margin="2,9,5,10" FontSize="18.667" FontWeight="Bold" Foreground="WhiteSmoke" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="comboBox" Grid.Column="3" Grid.Row="2" Margin="1,0,3,0" IsReadOnly="True" IsEnabled="False" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="13.333">
+            <ComboBoxItem>HSC</ComboBoxItem>
+            <ComboBoxItem>SSC</ComboBoxItem>
+            <ComboBoxItem>PSC</ComboBoxItem>
+            <ComboBoxItem>JSC</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="label_Copy3" Content="Program" Grid.Column="2" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold" Foreground="#FF232B2D" Height="31" Grid.Row="2" Grid.RowSpan="2"/>
+        <Label x:Name="label_Copy1" Content="Section" Grid.Column="5" FontSize="13.333" FontWeight="Bold" Foreground="#FF232B2D" Grid.Row="2" Margin="0,0,2,0"/>
+        <ComboBox x:Name="sections_list" Grid.Column="6" Grid.Row="2" Margin="0,2,0,0" IsReadOnly="True" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="13.333" SelectionChanged="sections_list_SelectionChanged_1"/>
+
+        <!-- =====================SELECTED COURSE ===========================-->
+
+
+    </Grid>
+</Window>
