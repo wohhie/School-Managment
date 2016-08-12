@@ -1,6 +1,22 @@
 # C-School-Managment-System
 This a university final project under 'Istiq Ahmed'. A school system where eveything will be organized.
 
+## Functionalities 
+  
+✔ Login <br/>
+  - Admin <br/>
+  - Student <br/>
+  - Teacher <br/>
+✔ Admin <br/>
+  - Create Admin <br/>
+  - Create Curriculum / Change Curriculum <br/>
+  - Create Section <br/>
+  - Create Courses <br/>
+  - Assign Course to Student <br/>
+  - Assign Course to Teacher <br/>
+w <br/>
+
+
 ## Users Role
 
 ✔ Administration 
