@@ -7,21 +7,25 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
 ✔ Student <br/>
 ✔ Teacher <br/>
   <br/>
-  ✔ Admin <br/>
+### ✔ Admin <br/>
   - Create Admin <br/>
   - Create Curriculum / Change Curriculum <br/>
   - Create Section <br/>
   - Create Courses <br/>
   - Assign Course to Student <br/>
   - Assign Course to Teacher <br/>
-  ✔ Student <br/>
+<br/>
+
+### ✔ Student <br/>
   - Login <br/>
   - Check Grade <br/>
   - Check Section <br/>
   - Check Course Details <br/>
   - Check Routine <br/>
   - Check Course Time <br/>
-  ✔ Teacher <br/>
+<br/>
+
+### ✔ Teacher <br/>
   - Login <br/>
   - Assignment Grade <br/>
   - Today Schedule <br/>
