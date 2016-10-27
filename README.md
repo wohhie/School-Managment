@@ -1,6 +1,14 @@
 # C-School-Managment-System
 This a university final project under 'Istiq Ahmed'. A school system where eveything will be organized.
 
+# Installation 
+## Requirements
+  - Microsoft Visual Studio - 2015 or less
+  - Microsoft SQL Server management Studio (for importing the databse and also work use queries. better enviroment rather than VS2015 server explorer.)
+
+## Setup Project
+  
+
 ## Functionalities 
   
 ✔ Admin <br/>
