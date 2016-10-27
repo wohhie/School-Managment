@@ -32,7 +32,7 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
     password: admin
 
 ## LIVE DEMO WITH DETAILS
-    <a href="http://recordit.co/5yQthec5JB">LIVE DEMO</a>
+   <a href="http://recordit.co/5yQthec5JB">LIVE DEMO</a>
     url: http://recordit.co/5yQthec5JB
 
 ## Functionalities 
