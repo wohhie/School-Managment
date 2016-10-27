@@ -7,7 +7,27 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
   - Microsoft SQL Server management Studio (for importing the databse and also work use queries. better enviroment rather than VS2015 server explorer.)
 
 ## Setup Project
-  
+### STEP 1. Download All the files from github.
+
+### STEP 2. In downloaded file, you will see A file named <b>'CCEmanagement.csproj.vspscc'</b>
+
+### STEP 3. IMPORT the file 'SQL SERVER MANAGEMENT STUDIO' 
+    - here I am using 2014 version you can use any version. I always prefer the upgraded version.
+
+### STEP 4. PLEASE! PLEASE! PLEASE! DONT CHANGE the database name. Use exact name 'ccemanagement'.
+
+### STEP 5. Connect it with your visual studio server.
+
+### STEP 6. Run with ID and Password
+#### student information
+    ID - 01-185-A
+    password - abc1234
+#### teacher information
+    ID - 012-285-4
+    password - abc1234
+#### admin information
+    ID - admin
+    password - admin
 
 ## Functionalities 
   
