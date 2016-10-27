@@ -20,14 +20,19 @@ This a university final project under 'Istiq Ahmed'. A school system where eveyt
 
 ### STEP 6. Run with ID and Password
 #### student information
-    ID - 01-185-A
-    password - abc1234
+    ID: 01-185-A
+    password: abc1234
+    
 #### teacher information
-    ID - 012-285-4
-    password - abc1234
+    ID: 012-285-4
+    password: abc1234
+    
 #### admin information
-    ID - admin
-    password - admin
+    ID: admin
+    password: admin
+
+## LIVE DEMO WITH DETAILS
+    url: http://g.recordit.co/5yQthec5JB.gif
 
 ## Functionalities 
   
